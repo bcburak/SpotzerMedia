@@ -1,0 +1,12 @@
+C:\Users\Burak.Celik\source\repos\Spotzer.Media\Spotzer.Media.Application\bin\Debug\net5.0\Spotzer.Media.Application.deps.json
+C:\Users\Burak.Celik\source\repos\Spotzer.Media\Spotzer.Media.Application\bin\Debug\net5.0\Spotzer.Media.Application.dll
+C:\Users\Burak.Celik\source\repos\Spotzer.Media\Spotzer.Media.Application\bin\Debug\net5.0\ref\Spotzer.Media.Application.dll
+C:\Users\Burak.Celik\source\repos\Spotzer.Media\Spotzer.Media.Application\bin\Debug\net5.0\Spotzer.Media.Application.pdb
+C:\Users\Burak.Celik\source\repos\Spotzer.Media\Spotzer.Media.Application\obj\Debug\net5.0\Spotzer.Media.Application.csproj.AssemblyReference.cache
+C:\Users\Burak.Celik\source\repos\Spotzer.Media\Spotzer.Media.Application\obj\Debug\net5.0\Spotzer.Media.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Burak.Celik\source\repos\Spotzer.Media\Spotzer.Media.Application\obj\Debug\net5.0\Spotzer.Media.Application.AssemblyInfoInputs.cache
+C:\Users\Burak.Celik\source\repos\Spotzer.Media\Spotzer.Media.Application\obj\Debug\net5.0\Spotzer.Media.Application.AssemblyInfo.cs
+C:\Users\Burak.Celik\source\repos\Spotzer.Media\Spotzer.Media.Application\obj\Debug\net5.0\Spotzer.Media.Application.csproj.CoreCompileInputs.cache
+C:\Users\Burak.Celik\source\repos\Spotzer.Media\Spotzer.Media.Application\obj\Debug\net5.0\Spotzer.Media.Application.dll
+C:\Users\Burak.Celik\source\repos\Spotzer.Media\Spotzer.Media.Application\obj\Debug\net5.0\ref\Spotzer.Media.Application.dll
+C:\Users\Burak.Celik\source\repos\Spotzer.Media\Spotzer.Media.Application\obj\Debug\net5.0\Spotzer.Media.Application.pdb
