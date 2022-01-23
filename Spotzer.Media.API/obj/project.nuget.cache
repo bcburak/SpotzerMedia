@@ -1,9 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "Ytb9I02HR2ijI3l4baJFdoB4j8vWjgSycakSi5KGbGLlqlnCjgko57Sk9w3lb5VutgNc2+rqGl707iH7ooNnWA==",
+  "dgSpecHash": "Fi8F2Xgb4w8OWIsZ4QI98J2qgzXYnfqKnzCjD7sA7O5Tox6643xVerNDE3GldFfINl/YHvt7l7YxlIGc1U5Wag==",
   "success": true,
   "projectFilePath": "C:\\Users\\Burak.Celik\\source\\repos\\Spotzer.Media\\Spotzer.Media.API\\Spotzer.Media.API.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Burak.Celik\\.nuget\\packages\\fluentvalidation\\10.3.4\\fluentvalidation.10.3.4.nupkg.sha512",
+    "C:\\Users\\Burak.Celik\\.nuget\\packages\\fluentvalidation.aspnetcore\\10.3.4\\fluentvalidation.aspnetcore.10.3.4.nupkg.sha512",
+    "C:\\Users\\Burak.Celik\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\10.3.4\\fluentvalidation.dependencyinjectionextensions.10.3.4.nupkg.sha512",
     "C:\\Users\\Burak.Celik\\.nuget\\packages\\microsoft.aspnet.webapi.client\\4.0.20710\\microsoft.aspnet.webapi.client.4.0.20710.nupkg.sha512",
     "C:\\Users\\Burak.Celik\\.nuget\\packages\\microsoft.aspnet.webapi.core\\4.0.20710\\microsoft.aspnet.webapi.core.4.0.20710.nupkg.sha512",
     "C:\\Users\\Burak.Celik\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",

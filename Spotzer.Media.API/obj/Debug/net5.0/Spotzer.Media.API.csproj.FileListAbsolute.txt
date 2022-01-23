@@ -35,3 +35,9 @@ C:\Users\Burak.Celik\source\repos\Spotzer.Media\Spotzer.Media.API\bin\Debug\net5
 C:\Users\Burak.Celik\source\repos\Spotzer.Media\Spotzer.Media.API\bin\Debug\net5.0\NLog.Extensions.Logging.dll
 C:\Users\Burak.Celik\source\repos\Spotzer.Media\Spotzer.Media.API\bin\Debug\net5.0\NLog.Web.AspNetCore.dll
 C:\Users\Burak.Celik\source\repos\Spotzer.Media\Spotzer.Media.API\obj\Debug\net5.0\Spotzer.Media.API.csproj.AssemblyReference.cache
+C:\Users\Burak.Celik\source\repos\Spotzer.Media\Spotzer.Media.API\bin\Debug\net5.0\FluentValidation.dll
+C:\Users\Burak.Celik\source\repos\Spotzer.Media\Spotzer.Media.API\bin\Debug\net5.0\FluentValidation.AspNetCore.dll
+C:\Users\Burak.Celik\source\repos\Spotzer.Media\Spotzer.Media.API\bin\Debug\net5.0\FluentValidation.DependencyInjectionExtensions.dll
+C:\Users\Burak.Celik\source\repos\Spotzer.Media\Spotzer.Media.API\bin\Debug\net5.0\Spotzer.Media.Application.dll
+C:\Users\Burak.Celik\source\repos\Spotzer.Media\Spotzer.Media.API\bin\Debug\net5.0\Spotzer.Media.Application.pdb
+C:\Users\Burak.Celik\source\repos\Spotzer.Media\Spotzer.Media.API\obj\Debug\net5.0\Spotzer.Media.API.csproj.CopyComplete

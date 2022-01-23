@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using Spotzer.Media.Application.Dtos;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -24,16 +25,10 @@ namespace Spotzer.Media.API.Controllers
         [HttpPost("AddOrder")]
         public IActionResult AddOrder([FromBody] dynamic order)
         {
-            //try
-            //{
+
             //    _logger.LogInformation("Test");
             //    return CreatedAtAction("User Created : ", new { user.FirstName }, user);
-            //}
-            //catch (Exception)
-            //{
-            //    return new JsonResult("Something wrong") { StatusCode = 500 };
-            //    throw;
-            //}
+           
             return Ok();
         }
 

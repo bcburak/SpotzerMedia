@@ -2,6 +2,44 @@
   "version": 3,
   "targets": {
     "net5.0": {
+      "FluentValidation/10.3.4": {
+        "type": "package",
+        "compile": {
+          "lib/net5.0/FluentValidation.dll": {}
+        },
+        "runtime": {
+          "lib/net5.0/FluentValidation.dll": {}
+        }
+      },
+      "FluentValidation.AspNetCore/10.3.4": {
+        "type": "package",
+        "dependencies": {
+          "FluentValidation": "10.3.4",
+          "FluentValidation.DependencyInjectionExtensions": "10.3.4"
+        },
+        "compile": {
+          "lib/net5.0/FluentValidation.AspNetCore.dll": {}
+        },
+        "runtime": {
+          "lib/net5.0/FluentValidation.AspNetCore.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
+      },
+      "FluentValidation.DependencyInjectionExtensions/10.3.4": {
+        "type": "package",
+        "dependencies": {
+          "FluentValidation": "10.3.4",
+          "Microsoft.Extensions.Dependencyinjection.Abstractions": "2.1.0"
+        },
+        "compile": {
+          "lib/netstandard2.1/FluentValidation.DependencyInjectionExtensions.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.1/FluentValidation.DependencyInjectionExtensions.dll": {}
+        }
+      },
       "Microsoft.AspNet.WebApi.Client/4.0.20710": {
         "type": "package",
         "dependencies": {
@@ -257,10 +295,73 @@
         "runtime": {
           "lib/net40/Swashbuckle.Core.dll": {}
         }
+      },
+      "Spotzer.Media.Application/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "FluentValidation.AspNetCore": "10.3.4"
+        },
+        "compile": {
+          "bin/placeholder/Spotzer.Media.Application.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Spotzer.Media.Application.dll": {}
+        }
       }
     }
   },
   "libraries": {
+    "FluentValidation/10.3.4": {
+      "sha512": "hsGRtnhTlCrRbxIOkKp6rCBtkq3UV0i31ckcJtd5j1i99zqLgbQGcbxK0SMU63DIto94f++uIdRpoycu8ySnDQ==",
+      "type": "package",
+      "path": "fluentvalidation/10.3.4",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "fluent-validation-icon.png",
+        "fluentvalidation.10.3.4.nupkg.sha512",
+        "fluentvalidation.nuspec",
+        "lib/net5.0/FluentValidation.dll",
+        "lib/net5.0/FluentValidation.xml",
+        "lib/netstandard2.0/FluentValidation.dll",
+        "lib/netstandard2.0/FluentValidation.xml",
+        "lib/netstandard2.1/FluentValidation.dll",
+        "lib/netstandard2.1/FluentValidation.xml"
+      ]
+    },
+    "FluentValidation.AspNetCore/10.3.4": {
+      "sha512": "YxJ6YH8Oh/DIyHHbjLdQkITGpksihDbznqEbKJy+uPfphdWwtlzaVSx1XyLotSj/bkPXOdLL8w5FPh1TA0Acpw==",
+      "type": "package",
+      "path": "fluentvalidation.aspnetcore/10.3.4",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "fluent-validation-icon.png",
+        "fluentvalidation.aspnetcore.10.3.4.nupkg.sha512",
+        "fluentvalidation.aspnetcore.nuspec",
+        "lib/net5.0/FluentValidation.AspNetCore.dll",
+        "lib/net5.0/FluentValidation.AspNetCore.xml",
+        "lib/netcoreapp3.1/FluentValidation.AspNetCore.dll",
+        "lib/netcoreapp3.1/FluentValidation.AspNetCore.xml"
+      ]
+    },
+    "FluentValidation.DependencyInjectionExtensions/10.3.4": {
+      "sha512": "LS0opGF4r/upI92Y+bToBzFqHYrfuHDWz9z9DN2hUn+/tmt9lN8n0bevyswabdKlTwL6s8vMhVQxHXM8wjOAbQ==",
+      "type": "package",
+      "path": "fluentvalidation.dependencyinjectionextensions/10.3.4",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "fluent-validation-icon.png",
+        "fluentvalidation.dependencyinjectionextensions.10.3.4.nupkg.sha512",
+        "fluentvalidation.dependencyinjectionextensions.nuspec",
+        "lib/netstandard2.0/FluentValidation.DependencyInjectionExtensions.dll",
+        "lib/netstandard2.0/FluentValidation.DependencyInjectionExtensions.xml",
+        "lib/netstandard2.1/FluentValidation.DependencyInjectionExtensions.dll",
+        "lib/netstandard2.1/FluentValidation.DependencyInjectionExtensions.xml"
+      ]
+    },
     "Microsoft.AspNet.WebApi.Client/4.0.20710": {
       "sha512": "BwFtW0cGr8tg02XalvF8MmznOpYrhquD2eXWI0oF3LLSqLMFoFkb8Pmke/7SnqkiNc+YfsaUqdXEKbjhv1Ctrw==",
       "type": "package",
@@ -720,12 +821,18 @@
         "swashbuckle.core.5.6.0.nupkg.sha512",
         "swashbuckle.core.nuspec"
       ]
+    },
+    "Spotzer.Media.Application/1.0.0": {
+      "type": "project",
+      "path": "../Spotzer.Media.Application/Spotzer.Media.Application.csproj",
+      "msbuildProject": "../Spotzer.Media.Application/Spotzer.Media.Application.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net5.0": [
       "NLog >= 4.7.13",
       "NLog.Web.AspNetCore >= 4.14.0",
+      "Spotzer.Media.Application >= 1.0.0",
       "Swashbuckle.AspNetCore >= 6.2.3",
       "Swashbuckle.AspNetCore.Annotations >= 6.2.3",
       "Swashbuckle.Core >= 5.6.0"
@@ -757,7 +864,11 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\Burak.Celik\\source\\repos\\Spotzer.Media\\Spotzer.Media.Application\\Spotzer.Media.Application.csproj": {
+              "projectPath": "C:\\Users\\Burak.Celik\\source\\repos\\Spotzer.Media\\Spotzer.Media.Application\\Spotzer.Media.Application.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

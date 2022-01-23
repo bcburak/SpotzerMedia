@@ -13,6 +13,9 @@ using System.Threading.Tasks;
 using System.Net;
 using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.AspNetCore.Http;
+using FluentValidation.AspNetCore;
+using Spotzer.Media.Application.Validations;
+using FluentValidation;
 
 namespace Spotzer.Media.API
 {
@@ -31,6 +34,12 @@ namespace Spotzer.Media.API
 
             services.AddControllers();
             services.AddMvcCore().AddApiExplorer();
+            //services.AddMvc().AddFluentValidation(fv => fv.RegisterValidatorsFromAssemblyContaining<PartnerAValidator>());
+            //services.AddMvc().AddFluentValidation(fv => fv.RegisterValidatorsFromAssemblyContaining<PartnerCValidator>());
+
+            services.AddSingleton<IValidator, PartnerAValidator>();
+            services.AddSingleton<IValidator, PartnerCValidator>();
+
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Spotzer.Media.API", Version = "v1" });
