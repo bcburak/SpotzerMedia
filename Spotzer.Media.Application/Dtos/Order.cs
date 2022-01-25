@@ -14,7 +14,8 @@ namespace Spotzer.Media.Application.Dtos
         public string SubmittedBy { get; set; }
         public string CompanyID { get; set; }
         public string CompanyName { get; set; }
-        public LineItems LineItem { get; set; }
+        public ICollection<LineItems> LineItems { get; set; }
+
 
         
     }

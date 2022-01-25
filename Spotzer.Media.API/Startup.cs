@@ -36,8 +36,19 @@ namespace Spotzer.Media.API
             services.AddMvcCore().AddApiExplorer();
             //services.AddMvc().AddFluentValidation(fv => fv.RegisterValidatorsFromAssemblyContaining<PartnerAValidator>());
             //services.AddMvc().AddFluentValidation(fv => fv.RegisterValidatorsFromAssemblyContaining<PartnerCValidator>());
+            services.AddControllers()
+           .AddFluentValidation(fv => fv.RegisterValidatorsFromAssemblyContaining<PartnerAValidator>());
 
-            services.AddSingleton<IValidator, PartnerAValidator>();
+            services
+                     .AddMvc()
+                     .AddFluentValidation(fv => {
+                         fv.RegisterValidatorsFromAssemblyContaining<PartnerAValidator>();
+                         fv.RegisterValidatorsFromAssemblyContaining<PartnerCValidator>();
+                         //fv.RegisterValidatorsFromAssemblyContaining<ClassInAssemblyThree>();
+                     });
+
+            services.AddControllers().AddNewtonsoftJson();
+            //services.AddSingleton<IValidator, PartnerAValidator>();
             services.AddSingleton<IValidator, PartnerCValidator>();
 
             services.AddSwaggerGen(c =>
@@ -59,6 +70,12 @@ namespace Spotzer.Media.API
 
             app.UseSwagger();
             app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "Spotzer.Media.API v1"));
+
+            //app.UseSwaggerUI(c =>
+            //{
+            //    c.RoutePrefix = "swagger/ui";
+            //    c.SwaggerEndpoint("/swagger/v1/swagger.json", "WebAPI(v1)");
+            //});
             app.UseRouting();
 
 
@@ -77,7 +94,7 @@ namespace Spotzer.Media.API
                         await context.Response.WriteAsync(System.Text.Json.JsonSerializer.Serialize(new
                         {
                             StatusCode = context.Response.StatusCode,
-                            Message = "Internal Server Error. "
+                            Message = "Internal Server Error. " + exception.Error.Message
                         }));
                     }                  
 

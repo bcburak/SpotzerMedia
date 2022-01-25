@@ -28,6 +28,11 @@ namespace Spotzer.Media.Application.Validations
                 .NotNull()
                 .WithMessage("ContactMobile is required");
             RuleFor(x => x.ContactEmail).EmailAddress();
+            RuleFor(x => x.LineItems).NotNull();
+            RuleForEach(x => x.LineItems).ChildRules(orders =>
+            {
+                orders.RuleFor(x => x.WebSiteDetails).NotNull();
+            });
         }
     }
 }

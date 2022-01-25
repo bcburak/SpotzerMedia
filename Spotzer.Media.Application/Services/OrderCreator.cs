@@ -7,19 +7,25 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Spotzer.Media.Application.Dtos
+namespace Spotzer.Media.Application.Services
 {
-    public class PartnerB : Order, IPartners
+    public class OrderCreator<T>
+        where T : IPartners
     {
+        private T _partner;
+
+        public OrderCreator(T partner)
+        {
+            _partner = partner;
+        }
 
         public ResponseModel CreateOrder(JObject order)
         {
-            return new ResponseModel();
+           return _partner.CreateOrder(order);
         }
         public void ValidatePartners()
         {
-
+            _partner.ValidatePartners();
         }
-        //Relation with order , website and paidSearch
     }
 }

@@ -6,14 +6,11 @@ using System.Threading.Tasks;
 
 namespace Spotzer.Media.Application.Dtos
 {
-    public class LineItems
+    public class LineItems : BaseLineItems
     {
-        public int ID { get; set; }
-        public string ProductID { get; set; }
-        public string ProductType { get; set; }
-        public string Notes { get; set; }
-        public string Category { get; set; }
-        public ICollection<LineItemDetails> LineItemDetails { get; set; }
-        
+        public WebSiteDetails WebSiteDetails { get; set; }
+        public AdwordCampaign AdwordCampaign { get; set; }
+        //public ICollection<LineItemDetails> LineItemDetails { get; set; }
+
     }
 }

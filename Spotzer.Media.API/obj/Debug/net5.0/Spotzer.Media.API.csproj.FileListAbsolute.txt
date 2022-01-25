@@ -40,4 +40,10 @@ C:\Users\Burak.Celik\source\repos\Spotzer.Media\Spotzer.Media.API\bin\Debug\net5
 C:\Users\Burak.Celik\source\repos\Spotzer.Media\Spotzer.Media.API\bin\Debug\net5.0\FluentValidation.DependencyInjectionExtensions.dll
 C:\Users\Burak.Celik\source\repos\Spotzer.Media\Spotzer.Media.API\bin\Debug\net5.0\Spotzer.Media.Application.dll
 C:\Users\Burak.Celik\source\repos\Spotzer.Media\Spotzer.Media.API\bin\Debug\net5.0\Spotzer.Media.Application.pdb
-C:\Users\Burak.Celik\source\repos\Spotzer.Media\Spotzer.Media.API\obj\Debug\net5.0\Spotzer.Media.API.csproj.CopyComplete
+C:\Users\Burak.Celik\source\repos\Spotzer.Media\Spotzer.Media.API\bin\Debug\net5.0\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\Burak.Celik\source\repos\Spotzer.Media\Spotzer.Media.API\bin\Debug\net5.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+C:\Users\Burak.Celik\source\repos\Spotzer.Media\Spotzer.Media.API\bin\Debug\net5.0\Newtonsoft.Json.Bson.dll
+C:\Users\Burak.Celik\source\repos\Spotzer.Media\Spotzer.Media.API\bin\Debug\net5.0\Microsoft.Extensions.DependencyModel.dll
+C:\Users\Burak.Celik\source\repos\Spotzer.Media\Spotzer.Media.API\bin\Debug\net5.0\Scrutor.dll
+C:\Users\Burak.Celik\source\repos\Spotzer.Media\Spotzer.Media.API\bin\Debug\net5.0\Swashbuckle.AspNetCore.Filters.dll
+C:\Users\Burak.Celik\source\repos\Spotzer.Media\Spotzer.Media.API\bin\Debug\net5.0\Swashbuckle.AspNetCore.Filters.Abstractions.dll

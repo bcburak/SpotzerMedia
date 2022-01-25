@@ -1,13 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "vGRSPNeu2UOyVJMjR9kdb7TWwJnoyD3UVL+vZE83ut/x0b3xwOFwL6nwMbYNevHtpedf4kTM3bxt/lpEdyx71Q==",
+  "dgSpecHash": "15aykuHos2xWDNiuUS5i0FPyaIM7BC2VBTCVErFd9dG4EmKc3khtE665SI1Z8PZ8JCB/GGUQ/HPAp096eK/CZQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\Burak.Celik\\source\\repos\\Spotzer.Media\\Spotzer.Media.Application\\Spotzer.Media.Application.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Burak.Celik\\.nuget\\packages\\fluentvalidation\\10.3.4\\fluentvalidation.10.3.4.nupkg.sha512",
     "C:\\Users\\Burak.Celik\\.nuget\\packages\\fluentvalidation.aspnetcore\\10.3.4\\fluentvalidation.aspnetcore.10.3.4.nupkg.sha512",
     "C:\\Users\\Burak.Celik\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\10.3.4\\fluentvalidation.dependencyinjectionextensions.10.3.4.nupkg.sha512",
-    "C:\\Users\\Burak.Celik\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\2.1.0\\microsoft.extensions.dependencyinjection.abstractions.2.1.0.nupkg.sha512"
+    "C:\\Users\\Burak.Celik\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\2.1.0\\microsoft.extensions.dependencyinjection.abstractions.2.1.0.nupkg.sha512",
+    "C:\\Users\\Burak.Celik\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
   ],
   "logs": []
 }

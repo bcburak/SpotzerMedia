@@ -21,6 +21,11 @@ namespace Spotzer.Media.Application.Validations
             RuleFor(x => x.RelatedOrder)
                 .NotNull()
                 .WithMessage("ExposureID is required");
+            RuleForEach(x => x.LineItems).ChildRules(orders =>
+            {
+                orders.RuleFor(x => x.WebSiteDetails).NotNull().WithMessage("Website product can not be null");
+                orders.RuleFor(x => x.AdwordCampaign).NotNull().WithMessage("Paid Search product can not be null");
+            });
         }
     }
 }
