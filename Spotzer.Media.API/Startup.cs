@@ -18,6 +18,7 @@ using Spotzer.Media.Application.Validations;
 using FluentValidation;
 using Swashbuckle.AspNetCore.Filters;
 using Spotzer.Media.Application.Dtos;
+using Newtonsoft.Json;
 
 namespace Spotzer.Media.API
 {
@@ -36,26 +37,25 @@ namespace Spotzer.Media.API
 
             services.AddControllers();
             services.AddMvcCore().AddApiExplorer();
-            //services.AddMvc().AddFluentValidation(fv => fv.RegisterValidatorsFromAssemblyContaining<PartnerAValidator>());
-            //services.AddMvc().AddFluentValidation(fv => fv.RegisterValidatorsFromAssemblyContaining<PartnerCValidator>());
-            services.AddControllers()
-           .AddFluentValidation(fv => fv.RegisterValidatorsFromAssemblyContaining<PartnerAValidator>());
+           // services.AddControllers()
+           //.AddFluentValidation(fv => fv.RegisterValidatorsFromAssemblyContaining<PartnerAValidator>());
 
             services
-                     .AddMvc()
+                     .AddControllers()
                      .AddFluentValidation(fv => {
                          fv.RegisterValidatorsFromAssemblyContaining<PartnerAValidator>();
+                         fv.RegisterValidatorsFromAssemblyContaining<PartnerBValidator>();
                          fv.RegisterValidatorsFromAssemblyContaining<PartnerCValidator>();
+                         fv.RegisterValidatorsFromAssemblyContaining<PartnerDValidator>();
                          //fv.RegisterValidatorsFromAssemblyContaining<ClassInAssemblyThree>();
                      });
 
-            services.AddControllers().AddNewtonsoftJson();
-            //services.AddSingleton<IValidator, PartnerAValidator>();
-            services.AddSingleton<IValidator, PartnerCValidator>();
+            services.AddControllers().AddNewtonsoftJson(opt => opt.SerializerSettings.NullValueHandling = NullValueHandling.Ignore);
+           
+            //services.AddSingleton<IValidator, PartnerCValidator>();
             services.AddSwaggerExamplesFromAssemblyOf<SwaggerCustomizationFilter>();
             services.AddSwaggerGen(c =>
             {
-                //c.OperationFilter<AddCommonParameOperationFilter>();
                 c.ExampleFilters();
                 c.SwaggerDoc("v1",
                      new OpenApiInfo
@@ -96,7 +96,7 @@ namespace Spotzer.Media.API
 
                     if(exception.Error != null)
                     {
-                        logger.LogError(exception.Error, "Exception Here");
+                        logger.LogError(exception.Error, exception.Error.Message);
                         context.Response.StatusCode = (int)HttpStatusCode.InternalServerError;
                         context.Response.ContentType = "application/json";
                         await context.Response.WriteAsync(System.Text.Json.JsonSerializer.Serialize(new
@@ -115,8 +115,6 @@ namespace Spotzer.Media.API
             {
                 endpoints.MapControllers();
             });
- 
-
         }
     }
 }
