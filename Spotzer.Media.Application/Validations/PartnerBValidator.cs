@@ -29,11 +29,26 @@ namespace Spotzer.Media.Application.Validations
                 .NotNull()
                 .WithMessage("CompanyName is required");
             #endregion
+            RuleFor(x => x.LineItems).NotNull().WithMessage("Order should include product items");
+
+           
             RuleForEach(x => x.LineItems).ChildRules(orders =>
             {
-                orders.RuleFor(x => x.WebSiteDetails).NotNull();
-                orders.RuleFor(x => x.AdwordCampaign).NotNull();
-            });
+                //orders.RuleFor(x => x.WebSiteDetails).NotNull().When(i => i.AdwordCampaign == null).WithMessage("Website and Adword product can not be null");
+                orders.RuleFor(x => x.WebSiteDetails).NotNull().When(i => i.AdwordCampaign == null).WithMessage("Website product can not be null");
+                orders.RuleFor(x => x.AdwordCampaign).NotNull().When(i => i.WebSiteDetails == null).WithMessage("Paid Search product can not be null");
+                orders.RuleFor(x => x.WebSiteDetails).ChildRules(website => website.RuleFor(i => i.WebsiteEmail).EmailAddress());
+
+            }).When(i=>i.LineItems.Count() > 1);
+
+            RuleForEach(x => x.LineItems).ChildRules(orders =>
+            {
+                //orders.RuleFor(x => x.WebSiteDetails).NotNull().When(i => i.AdwordCampaign == null).WithMessage("Website and Adword product can not be null");
+                orders.RuleFor(x => x.WebSiteDetails).NotNull().WithMessage("Website product can not be null");
+                orders.RuleFor(x => x.AdwordCampaign).NotNull().WithMessage("Paid Search product can not be null");
+                orders.RuleFor(x => x.WebSiteDetails).ChildRules(website => website.RuleFor(i => i.WebsiteEmail).EmailAddress());
+
+            }).When(i => i.LineItems.Count() == 1);
         }
     }
 }

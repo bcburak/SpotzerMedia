@@ -12,9 +12,10 @@ namespace Spotzer.Media.Application.Validations
     {
         public PartnerDValidator()
         {
+            RuleFor(x => x.LineItems).NotNull().WithMessage("Order should include product items");
             RuleForEach(x => x.LineItems).ChildRules(orders =>
             {
-                orders.RuleFor(x => x.AdwordCampaign).NotNull();
+                orders.RuleFor(x => x.AdwordCampaign).NotNull().WithMessage("Paid Search product can not be null");
             });
         }
     }

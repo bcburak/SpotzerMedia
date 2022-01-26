@@ -36,7 +36,7 @@ namespace Spotzer.Media.Application.Dtos
             }
             else
             {
-                response.Messages.Add("Partner A's order inserted successfully");
+                response.Messages.Add("Partner C's order inserted successfully");
             }
             return response;
         }

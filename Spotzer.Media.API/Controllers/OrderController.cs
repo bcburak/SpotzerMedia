@@ -15,6 +15,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Spotzer.Media.Application.Extensions;
 using Spotzer.Media.Application.Validations;
+using Swashbuckle.AspNetCore.Annotations;
 
 namespace Spotzer.Media.API.Controllers
 {
@@ -35,14 +36,13 @@ namespace Spotzer.Media.API.Controllers
         [SwaggerRequestExample(typeof(Order), typeof(SwaggerCustomizationFilter))]
         public IActionResult AddOrder([FromBody] Newtonsoft.Json.Linq.JObject order)
         {
-            var partner = DynamicExtensionHelper.GetJObjectValue(order, "Partner");
-            var partnerList = DynamicExtensionHelper.CheckPartnerFromList(partner);
-
+            var partner = StaticHelper.GetJObjectValue(order, "Partner");
 
             if (String.IsNullOrEmpty(partner))
                 throw new Exception("Partner value should not be null");
 
-            if(!partnerList)            
+            var partnerList = StaticHelper.CheckPartnerFromList(partner);
+            if (!partnerList)            
                 throw new Exception("Partner not found in our records. Please contact company");
 
             switch (partner)

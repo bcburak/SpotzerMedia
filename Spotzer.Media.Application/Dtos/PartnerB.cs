@@ -33,7 +33,7 @@ namespace Spotzer.Media.Application.Dtos
             }
             else
             {
-                response.Messages.Add("Partner A's order inserted successfully");
+                response.Messages.Add("Partner B's order inserted successfully");
             }
             return response;
             //validation log at

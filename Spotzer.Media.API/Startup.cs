@@ -50,7 +50,10 @@ namespace Spotzer.Media.API
                          //fv.RegisterValidatorsFromAssemblyContaining<ClassInAssemblyThree>();
                      });
 
-            services.AddControllers().AddNewtonsoftJson(opt => opt.SerializerSettings.NullValueHandling = NullValueHandling.Ignore);
+            services.AddControllers().AddNewtonsoftJson(opt =>
+            opt.SerializerSettings.NullValueHandling = NullValueHandling.Ignore
+            );
+            
            
             //services.AddSingleton<IValidator, PartnerCValidator>();
             services.AddSwaggerExamplesFromAssemblyOf<SwaggerCustomizationFilter>();

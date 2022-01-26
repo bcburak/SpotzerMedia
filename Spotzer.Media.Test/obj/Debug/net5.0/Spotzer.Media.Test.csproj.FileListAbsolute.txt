@@ -98,3 +98,17 @@ C:\Users\Burak.Celik\source\repos\Spotzer.Media\Spotzer.Media.Test\obj\Debug\net
 C:\Users\Burak.Celik\source\repos\Spotzer.Media\Spotzer.Media.Test\obj\Debug\net5.0\ref\Spotzer.Media.Test.dll
 C:\Users\Burak.Celik\source\repos\Spotzer.Media\Spotzer.Media.Test\obj\Debug\net5.0\Spotzer.Media.Test.pdb
 C:\Users\Burak.Celik\source\repos\Spotzer.Media\Spotzer.Media.Test\obj\Debug\net5.0\Spotzer.Media.Test.genruntimeconfig.cache
+C:\Users\Burak.Celik\source\repos\Spotzer.Media\Spotzer.Media.Test\bin\Debug\net5.0\CoverletSourceRootsMapping
+C:\Users\Burak.Celik\source\repos\Spotzer.Media\Spotzer.Media.Test\bin\Debug\net5.0\FluentValidation.dll
+C:\Users\Burak.Celik\source\repos\Spotzer.Media\Spotzer.Media.Test\bin\Debug\net5.0\FluentValidation.AspNetCore.dll
+C:\Users\Burak.Celik\source\repos\Spotzer.Media\Spotzer.Media.Test\bin\Debug\net5.0\FluentValidation.DependencyInjectionExtensions.dll
+C:\Users\Burak.Celik\source\repos\Spotzer.Media\Spotzer.Media.Test\bin\Debug\net5.0\System.Net.Http.Formatting.dll
+C:\Users\Burak.Celik\source\repos\Spotzer.Media\Spotzer.Media.Test\bin\Debug\net5.0\System.Web.Http.dll
+C:\Users\Burak.Celik\source\repos\Spotzer.Media\Spotzer.Media.Test\bin\Debug\net5.0\Swashbuckle.Core.dll
+C:\Users\Burak.Celik\source\repos\Spotzer.Media\Spotzer.Media.Test\bin\Debug\net5.0\Swashbuckle.Examples.dll
+C:\Users\Burak.Celik\source\repos\Spotzer.Media\Spotzer.Media.Test\bin\Debug\net5.0\Spotzer.Media.Application.dll
+C:\Users\Burak.Celik\source\repos\Spotzer.Media\Spotzer.Media.Test\bin\Debug\net5.0\Spotzer.Media.Application.pdb
+C:\Users\Burak.Celik\source\repos\Spotzer.Media\Spotzer.Media.Test\bin\Debug\net5.0\PartnerA.json
+C:\Users\Burak.Celik\source\repos\Spotzer.Media\Spotzer.Media.Test\bin\Debug\net5.0\PartnerB.json
+C:\Users\Burak.Celik\source\repos\Spotzer.Media\Spotzer.Media.Test\bin\Debug\net5.0\PartnerC.json
+C:\Users\Burak.Celik\source\repos\Spotzer.Media\Spotzer.Media.Test\bin\Debug\net5.0\PartnerD.json

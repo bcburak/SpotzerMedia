@@ -14,7 +14,7 @@ namespace Spotzer.Media.API
         public string ContactPhone { get; set; }
         public string ContactMobile { get; set; }
         public string ContactEmail { get; set; }
-        public int ExposureID { get; set; }
+        public int? ExposureID { get; set; }
         public string UDAC { get; set; }
         public string RelatedOrder { get; set; }
     }

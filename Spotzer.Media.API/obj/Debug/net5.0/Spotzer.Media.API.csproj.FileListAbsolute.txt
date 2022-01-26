@@ -20,7 +20,6 @@ C:\Users\Burak.Celik\source\repos\Spotzer.Media\Spotzer.Media.API\obj\Debug\net5
 C:\Users\Burak.Celik\source\repos\Spotzer.Media\Spotzer.Media.API\obj\Debug\net5.0\Spotzer.Media.API.AssemblyInfoInputs.cache
 C:\Users\Burak.Celik\source\repos\Spotzer.Media\Spotzer.Media.API\obj\Debug\net5.0\Spotzer.Media.API.AssemblyInfo.cs
 C:\Users\Burak.Celik\source\repos\Spotzer.Media\Spotzer.Media.API\obj\Debug\net5.0\Spotzer.Media.API.csproj.CoreCompileInputs.cache
-C:\Users\Burak.Celik\source\repos\Spotzer.Media\Spotzer.Media.API\obj\Debug\net5.0\Spotzer.Media.API.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\Burak.Celik\source\repos\Spotzer.Media\Spotzer.Media.API\obj\Debug\net5.0\Spotzer.Media.API.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\Burak.Celik\source\repos\Spotzer.Media\Spotzer.Media.API\obj\Debug\net5.0\staticwebassets\Spotzer.Media.API.StaticWebAssets.Manifest.cache
 C:\Users\Burak.Celik\source\repos\Spotzer.Media\Spotzer.Media.API\obj\Debug\net5.0\staticwebassets\Spotzer.Media.API.StaticWebAssets.xml
@@ -48,3 +47,5 @@ C:\Users\Burak.Celik\source\repos\Spotzer.Media\Spotzer.Media.API\bin\Debug\net5
 C:\Users\Burak.Celik\source\repos\Spotzer.Media\Spotzer.Media.API\bin\Debug\net5.0\Swashbuckle.AspNetCore.Filters.dll
 C:\Users\Burak.Celik\source\repos\Spotzer.Media\Spotzer.Media.API\bin\Debug\net5.0\Swashbuckle.AspNetCore.Filters.Abstractions.dll
 C:\Users\Burak.Celik\source\repos\Spotzer.Media\Spotzer.Media.API\bin\Debug\net5.0\Swashbuckle.Examples.dll
+C:\Users\Burak.Celik\source\repos\Spotzer.Media\Spotzer.Media.API\obj\Debug\net5.0\Spotzer.Media.API.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Burak.Celik\source\repos\Spotzer.Media\Spotzer.Media.API\obj\Debug\net5.0\Spotzer.Media.API.csproj.CopyComplete

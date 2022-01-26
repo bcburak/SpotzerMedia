@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31727.386
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Spotzer.Media.API", "Spotzer.Media.API\Spotzer.Media.API.csproj", "{2329CB05-6F82-40BA-9554-A46459DECD8E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Spotzer.Media.API", "Spotzer.Media.API\Spotzer.Media.API.csproj", "{2329CB05-6F82-40BA-9554-A46459DECD8E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Spotzer.Media.Application", "Spotzer.Media.Application\Spotzer.Media.Application.csproj", "{891DCE8A-8D26-4E26-A8EA-A915EA3F0A84}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Spotzer.Media.Application", "Spotzer.Media.Application\Spotzer.Media.Application.csproj", "{891DCE8A-8D26-4E26-A8EA-A915EA3F0A84}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Spotzer.Media.Test", "Spotzer.Media.Test\Spotzer.Media.Test.csproj", "{CFABA65D-4ADA-4529-A053-09C39332E2F2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Spotzer.Media.Test", "Spotzer.Media.Test\Spotzer.Media.Test.csproj", "{CFABA65D-4ADA-4529-A053-09C39332E2F2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

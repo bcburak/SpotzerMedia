@@ -12,6 +12,7 @@ namespace Spotzer.Media.Application.Validations
     {
         public PartnerAValidator()
         {
+            #region PartnerA requirements
             RuleFor(x => x.ContactFirstName)
                 .NotNull()
                 .WithMessage("ContactFirstName is required");
@@ -28,10 +29,13 @@ namespace Spotzer.Media.Application.Validations
                 .NotNull()
                 .WithMessage("ContactMobile is required");
             RuleFor(x => x.ContactEmail).EmailAddress();
-            RuleFor(x => x.LineItems).NotNull();
+            #endregion
+            RuleFor(x => x.LineItems).NotNull().WithMessage("Order should include product items");
+
             RuleForEach(x => x.LineItems).ChildRules(orders =>
             {
-                orders.RuleFor(x => x.WebSiteDetails).NotNull();
+                orders.RuleFor(x => x.WebSiteDetails).NotNull().WithMessage("Website product can not be null");
+                orders.RuleFor(x => x.WebSiteDetails).ChildRules(website => website.RuleFor(i => i.WebsiteEmail).EmailAddress());
             });
         }
     }
