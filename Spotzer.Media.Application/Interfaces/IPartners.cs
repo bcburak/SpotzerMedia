@@ -11,7 +11,7 @@ namespace Spotzer.Media.Application.Interfaces
     public interface IPartners
     {
         ResponseModel CreateOrder(JObject order);
-        void ValidatePartners();
+    
         
     }
 }

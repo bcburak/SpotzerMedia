@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json.Linq;
+﻿using FluentValidation.Results;
+using Newtonsoft.Json.Linq;
 using Spotzer.Media.Application.Interfaces;
 using Spotzer.Media.Application.Validations;
 using System;
@@ -13,12 +14,29 @@ namespace Spotzer.Media.Application.Dtos
     {
         public ResponseModel CreateOrder(JObject order)
         {
-            return new ResponseModel();
-        }
-        public void ValidatePartners()
-        {
+            var mappedPartner = order.ToObject<PartnerD>();
 
+            var validator = new PartnerDValidator();
+
+            List<string> validationMessages = new List<string>();
+            var validationResult = validator.Validate(mappedPartner);
+            var response = new ResponseModel();
+            if (!validationResult.IsValid)
+            {
+                response.IsValid = false;
+                foreach (ValidationFailure failure in validationResult.Errors)
+                {
+                    validationMessages.Add(failure.ErrorMessage);
+                }
+                response.Messages = validationMessages;
+            }
+            else
+            {
+                response.Messages.Add("Partner A's order inserted successfully");
+            }
+            return response;
         }
+      
 
         //Relation Order 
         //Relation PaidSearch

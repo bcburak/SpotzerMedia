@@ -13,6 +13,8 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
 using System.Threading.Tasks;
+using Spotzer.Media.Application.Extensions;
+using Spotzer.Media.Application.Validations;
 
 namespace Spotzer.Media.API.Controllers
 {
@@ -22,6 +24,7 @@ namespace Spotzer.Media.API.Controllers
     {
         // GET: HomeController
         private readonly ILogger<OrderController> _logger;
+        private ResponseModel response;
 
         public OrderController(ILogger<OrderController> logger)
         {
@@ -32,30 +35,44 @@ namespace Spotzer.Media.API.Controllers
         [SwaggerRequestExample(typeof(Order), typeof(SwaggerCustomizationFilter))]
         public IActionResult AddOrder([FromBody] Newtonsoft.Json.Linq.JObject order)
         {
-            var partner = GetJArrayValue(order, "Partner");
+            var partner = DynamicExtensionHelper.GetJObjectValue(order, "Partner");
+            var partnerList = DynamicExtensionHelper.CheckPartnerFromList(partner);
+
 
             if (String.IsNullOrEmpty(partner))
                 throw new Exception("Partner value should not be null");
 
-            OrderCreator<PartnerA> creator = new OrderCreator<PartnerA>(new PartnerA());
-            var returnVal = creator.CreateOrder(order);
+            if(!partnerList)            
+                throw new Exception("Partner not found in our records. Please contact company");
 
-
-            return Ok(returnVal);
-        }
-
-        private string GetJArrayValue(JObject yourJArray, string key)
-        {
-            string withLowerKey = char.ToLower(key[0]) + key.Substring(1);
-            foreach (KeyValuePair<string, JToken> keyValuePair in yourJArray)
-            {
-                if (key == keyValuePair.Key || withLowerKey == keyValuePair.Key)
-                {
-                    return keyValuePair.Value.ToString();
-                }
+            switch (partner)
+            {   
+                case "A":
+                    var creatorForA = new OrderCreator<PartnerA>(new PartnerA());
+                    response = creatorForA.CreateOrder(order);
+                    break;
+                case "B":
+                    var creatorForB = new OrderCreator<PartnerB>(new PartnerB());
+                    response = creatorForB.CreateOrder(order);
+                    break;
+                case "C":
+                    var creatorForC = new OrderCreator<PartnerC>(new PartnerC());
+                    response = creatorForC.CreateOrder(order);
+                    break;
+                case "D":
+                    var creatorForD = new OrderCreator<PartnerD>(new PartnerD());
+                    response = creatorForD.CreateOrder(order);
+                    break;
+                default:
+                    throw new Exception("No order is created!");
+                    
             }
-            return string.Empty;
+
+
+            return Ok(response);
         }
+
+    
 
     }
 }

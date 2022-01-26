@@ -23,9 +23,5 @@ namespace Spotzer.Media.Application.Services
         {
            return _partner.CreateOrder(order);
         }
-        public void ValidatePartners()
-        {
-            _partner.ValidatePartners();
-        }
     }
 }

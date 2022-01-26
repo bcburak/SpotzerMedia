@@ -9,4 +9,3 @@ C:\Users\Burak.Celik\source\repos\Spotzer.Media\Spotzer.Media.Application\obj\De
 C:\Users\Burak.Celik\source\repos\Spotzer.Media\Spotzer.Media.Application\obj\Debug\net5.0\Spotzer.Media.Application.dll
 C:\Users\Burak.Celik\source\repos\Spotzer.Media\Spotzer.Media.Application\obj\Debug\net5.0\ref\Spotzer.Media.Application.dll
 C:\Users\Burak.Celik\source\repos\Spotzer.Media\Spotzer.Media.Application\obj\Debug\net5.0\Spotzer.Media.Application.pdb
-C:\Users\Burak.Celik\source\repos\Spotzer.Media\Spotzer.Media.Application\obj\Debug\net5.0\Spotzer.Media.Application.csproj.AssemblyReference.cache

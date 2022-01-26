@@ -29,7 +29,6 @@ namespace Spotzer.Media.Application.Dtos
 
             List<string> validationMessages = new List<string>();
             var validationResult = validator.Validate(mappedPartner);
-
             var response = new ResponseModel();
             if (!validationResult.IsValid)
             {
@@ -44,19 +43,9 @@ namespace Spotzer.Media.Application.Dtos
             {
                 response.Messages.Add("Partner A's order inserted successfully");
             }
-
             return response;
 
         }
-        public void ValidatePartners()
-        {
-            //validation log at
-        }
-
-        //public Order Order { get; set; }
-
-
-
         //Relation with order, website
     }
 
