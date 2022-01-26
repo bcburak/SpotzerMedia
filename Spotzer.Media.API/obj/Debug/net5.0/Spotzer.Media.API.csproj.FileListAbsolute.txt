@@ -47,3 +47,4 @@ C:\Users\Burak.Celik\source\repos\Spotzer.Media\Spotzer.Media.API\bin\Debug\net5
 C:\Users\Burak.Celik\source\repos\Spotzer.Media\Spotzer.Media.API\bin\Debug\net5.0\Scrutor.dll
 C:\Users\Burak.Celik\source\repos\Spotzer.Media\Spotzer.Media.API\bin\Debug\net5.0\Swashbuckle.AspNetCore.Filters.dll
 C:\Users\Burak.Celik\source\repos\Spotzer.Media\Spotzer.Media.API\bin\Debug\net5.0\Swashbuckle.AspNetCore.Filters.Abstractions.dll
+C:\Users\Burak.Celik\source\repos\Spotzer.Media\Spotzer.Media.API\bin\Debug\net5.0\Swashbuckle.Examples.dll

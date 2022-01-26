@@ -2,6 +2,7 @@
 using Newtonsoft.Json.Linq;
 using Spotzer.Media.Application.Interfaces;
 using Spotzer.Media.Application.Validations;
+using Swashbuckle.Examples;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,6 +13,7 @@ namespace Spotzer.Media.Application.Dtos
 {
     public  class PartnerA : Order, IPartners
     {
+
         public string ContactFirstName { get; set; }
         public string ContactLastName { get; set; }
         public string ContactTitle { get; set; }
@@ -57,4 +59,5 @@ namespace Spotzer.Media.Application.Dtos
 
         //Relation with order, website
     }
+
 }

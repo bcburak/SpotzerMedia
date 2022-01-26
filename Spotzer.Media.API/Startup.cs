@@ -16,6 +16,8 @@ using Microsoft.AspNetCore.Http;
 using FluentValidation.AspNetCore;
 using Spotzer.Media.Application.Validations;
 using FluentValidation;
+using Swashbuckle.AspNetCore.Filters;
+using Spotzer.Media.Application.Dtos;
 
 namespace Spotzer.Media.API
 {
@@ -50,15 +52,21 @@ namespace Spotzer.Media.API
             services.AddControllers().AddNewtonsoftJson();
             //services.AddSingleton<IValidator, PartnerAValidator>();
             services.AddSingleton<IValidator, PartnerCValidator>();
-
+            services.AddSwaggerExamplesFromAssemblyOf<SwaggerCustomizationFilter>();
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "Spotzer.Media.API", Version = "v1" });
-            });
-            
+                //c.OperationFilter<AddCommonParameOperationFilter>();
+                c.ExampleFilters();
+                c.SwaggerDoc("v1",
+                     new OpenApiInfo
+                     {
+                         Title = "Spotzer Media API",
+                         Version = "v1",
+                         Description = "A order create API to demo Spotzer partners",                        
+                         
+                     });               
+            });            
         }
-
-
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -69,7 +77,7 @@ namespace Spotzer.Media.API
             }
 
             app.UseSwagger();
-            app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "Spotzer.Media.API v1"));
+            app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "Spotzer Media API v1"));
 
             //app.UseSwaggerUI(c =>
             //{
