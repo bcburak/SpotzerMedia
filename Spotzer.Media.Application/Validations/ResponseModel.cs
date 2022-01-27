@@ -10,10 +10,10 @@ namespace Spotzer.Media.Application.Validations
     {
         public ResponseModel()
         {
-            IsValid = true;
+            IsSuccess = true;
             Messages = new List<string>();
         }
-        public bool IsValid { get; set; }
+        public bool IsSuccess { get; set; }
         public List<string> Messages { get; set; }
     }
 }

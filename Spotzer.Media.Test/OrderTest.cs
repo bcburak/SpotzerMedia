@@ -18,7 +18,7 @@ namespace Spotzer.Media.Test
             var orderObject = OrderData("partnerA.json");
             var creator = new OrderCreator<PartnerA>(new PartnerA());
             var response = creator.CreateOrder(orderObject);
-            var actualData = response.IsValid;
+            var actualData = response.IsSuccess;
             Assert.True(actualData);
 
         }
@@ -28,7 +28,7 @@ namespace Spotzer.Media.Test
             var orderObject = OrderData("partnerB.json");
             var creator = new OrderCreator<PartnerB>(new PartnerB());
             var response = creator.CreateOrder(orderObject);
-            var actualData = response.IsValid;
+            var actualData = response.IsSuccess;
             Assert.True(actualData);
 
         }
@@ -38,7 +38,7 @@ namespace Spotzer.Media.Test
             var orderObject = OrderData("partnerC.json");
             var creator = new OrderCreator<PartnerC>(new PartnerC());
             var response = creator.CreateOrder(orderObject);
-            var actualData = response.IsValid;
+            var actualData = response.IsSuccess;
             Assert.True(actualData);
         }
         [Fact]
@@ -47,7 +47,7 @@ namespace Spotzer.Media.Test
             var orderObject = OrderData("partnerD.json");
             var creator = new OrderCreator<PartnerD>(new PartnerD());
             var response = creator.CreateOrder(orderObject);
-            var actualData = response.IsValid;
+            var actualData = response.IsSuccess;
             Assert.True(actualData);
         }
 

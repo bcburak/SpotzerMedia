@@ -27,7 +27,7 @@ namespace Spotzer.Media.Application.Dtos
             var response = new ResponseModel();
             if (!validationResult.IsValid)
             {
-                response.IsValid = false;
+                response.IsSuccess = false;
                 foreach (ValidationFailure failure in validationResult.Errors)
                 {
                     validationMessages.Add(failure.ErrorMessage);
@@ -36,6 +36,7 @@ namespace Spotzer.Media.Application.Dtos
             }
             else
             {
+                response.IsSuccess = true;
                 response.Messages.Add("Partner C's order inserted successfully");
             }
             return response;
