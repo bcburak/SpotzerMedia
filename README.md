@@ -28,7 +28,7 @@ In my approach it has also Response Model for validation classes to response use
 # Test
 For testing, getting help from Xunit. Tested static helper classes' methods and Order creators.
 
-#Basic UML Diagrrams
-
+# Basic UML Diagrams
+![alt text](https://github.com/bcburak/SpotzerMedia/blob/master/Spotzer.Media.API/img/Spotzer_basic_uml.png)
 
 
